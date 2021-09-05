@@ -6,11 +6,15 @@ export const newStoriesURL = `${baseURL}newstories.json`;
 export const storyURL = `${baseURL}item/`;
 
 export const getStory = async (storyId) => {
-    const result = await axios.get(`${storyURL + storyId}.json`).then(({data}) => data);
+    const result = await axios
+        .get(`${storyURL + storyId}.json`)
+        .then(({ data }) => data && selectFields(data));
     return result;
-}
+};
 
 export const getStoryIds = async () => {
-    const result = await axios.get(newStoriesURL).then(({data}) => selectFields(data));
+    const result = await axios
+        .get(newStoriesURL)
+        .then(({ data }) => data);
     return result;
 };

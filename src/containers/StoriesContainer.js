@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getStoryIds } from "../services/hnApi";
 import { Story } from "../components/Story";
 
@@ -7,5 +7,12 @@ export const StoriesContainer = () => {
     useEffect(() => {
         getStoryIds().then((data) => setStoryIds(data));
     }, []);
-    return storyIds.map((storyId) => <Story storyId={storyId} key={storyId} />);
+    return (
+        <>
+            <h1>Hacker News Stories</h1>
+            {storyIds.map((storyId) => (
+                <Story storyId={storyId} key={storyId} />
+            ))}
+        </>
+    );
 };
