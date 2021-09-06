@@ -10,7 +10,11 @@ export const StoriesContainer = () => {
     const [storyIds, setStoryIds] = useState([]);
 
     useEffect(() => {
-        getStoryIds().then((data) => setStoryIds(data));
+        function updateHandler() {
+            getStoryIds().then((data) => setStoryIds(data));
+            setInterval(updateHandler, 60000);
+        }
+        updateHandler();
     }, []);
 
     return (
