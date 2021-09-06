@@ -18,18 +18,19 @@ export const mapTime = (timestamp) => {
     }
     interval = Math.floor(seconds / 3600);
 
-    if (interval > 1) {
-        return `${interval} hours`;
+    if (interval >= 1) {
+        return interval === 1 ? "1 hour" : `${interval} hours`;
     }
+
     interval = Math.floor(seconds / 60);
 
     if (interval > 1) {
         return `${interval} minutes`;
     }
 
-    if (Math.floor(seconds) < 0) {
-        return "now";
+    if ((interval = 1)) {
+        return "1 minute";
     }
 
-    return `${Math.floor(seconds)} seconds`;
+    return "now";
 };

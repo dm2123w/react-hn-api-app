@@ -28,14 +28,14 @@ export const StoryTitle = styled.h1`
 
 export const StoryMeta = styled.div`
     font-style: italic;
+    padding: 10px;
 
     > span:first-child {
         margin-right: 10px;
     }
 
-    > span:not(:first-child):before {
-        content: "•";
-        margin: 0 7px;
+    > span:not(:first-child) {
+        margin-left: 25px;
     }
     .story__meta-bold {
         font-weight: bold;
