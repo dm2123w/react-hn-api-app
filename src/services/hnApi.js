@@ -13,8 +13,6 @@ export const getStory = async (storyId) => {
 };
 
 export const getStoryIds = async () => {
-    const result = await axios
-        .get(newStoriesURL)
-        .then(({ data }) => data);
+    const result = await axios.get(newStoriesURL).then(({ data }) => data);
     return result;
 };
