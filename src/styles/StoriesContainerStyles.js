@@ -24,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 
+export const AppHeader = styled.h1`
+    text-align: center;
+`;
+
 export const StoriesContainerWrapper = styled.main`
     max-width: 1140px;
     padding: 20px 15px;

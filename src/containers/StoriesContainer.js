@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getStoryIds } from "../services/hnApi";
 import { Story } from "../components/Story";
 import {
+    AppHeader,
     GlobalStyle,
     StoriesContainerWrapper,
 } from "../styles/StoriesContainerStyles";
@@ -21,7 +22,7 @@ export const StoriesContainer = () => {
         <>
             <GlobalStyle />
             <StoriesContainerWrapper data-test-id="stories-container">
-                <h1>Hacker News Stories</h1>
+                <AppHeader>Hacker News Stories</AppHeader>
                 {storyIds.slice(0, 200).map((storyId) => (
                     <Story storyId={storyId} key={storyId} />
                 ))}
