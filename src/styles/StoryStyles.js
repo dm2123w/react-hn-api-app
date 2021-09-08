@@ -6,7 +6,7 @@ export const StoryWrapper = styled.section`
     border-top: 1px solid #cccccc;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #f9f9f4;
+    background-color: #ededed;
     &:first-of-type {
         border-top: 10;
     }
@@ -15,7 +15,7 @@ export const StoryWrapper = styled.section`
         padding-bottom: 0;
     }
     &:hover {
-        background-color: #f7f7eb;
+        background-color: #f5f5f5;
     }
 `;
 
